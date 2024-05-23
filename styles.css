@@ -1,0 +1,183 @@
+    /*-- Poppins Font link --*/
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@400;500;600;700&display=swap');
+
+    /*-- Variables --*/
+    :root {
+        --body-color: rgb(255, 255, 255);
+        --color-white: rgb(255, 255, 255);
+
+        --text-color-second: rgb(68, 68, 68);
+        --text-color-third: rgb(35, 110, 224);
+
+        --first-color: rgb(110, 87, 224);
+        --first-color-hover: rgb(40, 91, 212);
+
+        --second-color: rgb(0, 201, 255);
+        --third-color: rgb(192, 166, 49);
+        --first-shadow-color: rgb(192, 166, 49);
+    }
+
+    /*-- Base --*/
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /*-- Smooth Scroll --*/
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url("/img/Shiny\ Overlay.svg");
+        background-position: center;
+        background-size: 100%;
+        background-attachment: fixed;
+    }
+
+    div .mt-3 {
+        color: #ffffff;
+    }
+
+    /*-- Navigation Bar -- */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 90px;
+        line-height: 90px;
+        background: var(--body-color);
+        padding-inline: 9vw;
+        position: sticky;
+        /* Make the header sticky */
+        top: 0;
+        /* Position the header at the top of the page */
+        transition: .3s;
+        z-index: 100;
+    }
+
+    .nav-logo {
+        position: relative;
+    }
+
+    .nav-name {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--text-color-third);
+    }
+
+    .nav-logo span {
+        position: absolute;
+        top: -15px;
+        right: -20px;
+        font-size: 5em;
+        color: var(--text-color-second);
+    }
+
+    .nav-menu,
+    .nav_menu_list {
+        display: flex;
+    }
+
+    .nav-menu .nav_list {
+        list-style: none;
+        position: relative;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--text-color-second);
+        font-weight: 500;
+        padding-inline: 15px;
+        margin-inline: 20px;
+    }
+
+    .nav-menu-btn {
+        display: none;
+    }
+
+    .nav-menu-btn i {
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .active-link {
+        position: relative;
+        color: var(--first-color);
+        transition: .3;
+    }
+
+    .active-link::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -15px;
+        transform: translate(-50%, -50%);
+        width: 5px;
+        height: 5px;
+        background: var(--first-color);
+        border-radius: 50%;
+    }
+
+    footer {
+        display: block;
+        padding: 40px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 30px;
+        background: #F8F8F8;
+    }
+
+    /* Pagination Styles */
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .pagination a {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        margin-right: 5px;
+    }
+
+    .pagination a.active {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    /* container */
+
+    .container {
+        max-width: 960px;
+    }
+
+    .table {
+        width: 100%;
+    }
+
+    .table th,
+    .table td {
+        text-align: center;
+    }
+
+    #paginationInfo {
+
+        margin-top: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    @media (max-width: 576px) {
+
+        /* ปรับขนาดของข้อความเมื่อหน้าจอเล็กกว่า 576px */
+        #paginationInfo {
+            font-size: 12px;
+        }
+    }
